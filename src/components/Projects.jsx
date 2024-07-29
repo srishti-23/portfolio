@@ -10,7 +10,7 @@ const projectData = [
     id: 1,
     src: todo,
     l: "https://github.com/srishti-23/toDoApp",
-    href: "https://main--srishtitasklist.netlify.app/",
+    href: "https://main--srishtitasklist.netlify.app",
     details: "This Todo App is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) with Tailwind CSS for styling.",
   },
  
