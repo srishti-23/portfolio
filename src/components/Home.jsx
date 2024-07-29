@@ -19,7 +19,7 @@ const Home = () => {
         <Welcome  text ="Welcome to Srishti's portfolio" delay={100}/></p>
         <div >
           <a className="group text-white w-fit  my-2 px-4 py-3 mx-auto flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-125 duration-200"
-           href={process.env.PUBLIC_URL + '/Srishti.pdf'} 
+           href={process.env.PUBLIC_URL + '/resume.pdf'} 
            target="_blank"
             
            rel="noopener noreferrer" > Resume

@@ -8,6 +8,10 @@ import jquery from "../images/jquery.png";
 import react from "../images/react.png";
 import redux from "../images/redux.png";
 import github from "../images/github.png"
+import java from "../images/java.png"
+import mongo from "../images/mongodb.png"
+import express from "../images/express.png"
+import node from "../images/node-dot-js.png"
 
 const Skills = () => {
   const skill = [
@@ -65,6 +69,30 @@ const Skills = () => {
       title: "GITHUB",
       style: "shadow-gray-400",
     },
+    {
+      id: 10,
+      src: java,
+      title: "JAVA",
+      style: "shadow-red-500 place-content-center",
+    },
+    {
+      id: 11,
+      src: mongo,
+      title: "MONGO DB",
+      style: "shadow-green-500 place-content-center",
+    },
+    {
+      id: 12,
+      src: express,
+      title: "EXPRESS",
+      style: "shadow-gray-400 place-content-center",
+    },
+    {
+      id: 13,
+      src: node,
+      title: "Node",
+      style: "shadow-[#65a30d] place-content-center",
+    },
   ];
   return (
     <>
@@ -86,7 +114,7 @@ const Skills = () => {
                 className={
                   "shadow-md hover:scale-125 duration-500 py-2 rounded-lg border-black" +
                   " " +
-                  style
+                 style
                 }
               >
                 <img

@@ -1,33 +1,58 @@
-import React from "react";
-import todo from "../images/todo.jpg"
-const project = [
+import React, { useState } from "react";
+import todo from "../images/todoApp.png";
+import QuizPlatform from "../images/quizPlat.png";
+import entertainmentApp from "../images/etApp.png";
+import myntra from "../images/myntra-clone.png";
+import travel from "../images/travel.png";
+
+const projectData = [
   {
     id: 1,
     src: todo,
-    href:'https://list23.netlify.app/'
+    l: "https://github.com/srishti-23/toDoApp",
+    href: "https://main--srishtitasklist.netlify.app/",
+    details: "This Todo App is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) with Tailwind CSS for styling.",
   },
+ 
   {
     id: 2,
-    src: todo,
-    child:todo,
-    href:'https://list23.netlify.app/'
-
+    src: entertainmentApp,
+    l: "https://github.com/srishti-23/Entertainment-app",
+    href: "https://entertainment-app-frontend-styv.onrender.com",
+    details: "This is an entertainment website similar to Netflix that display a list of movies and TV shows and provides the users to signup and login to the website and also bookmark their favourite movies and TV shows. ",
   },
   {
     id: 3,
-    src: todo,
-    href:'https://list23.netlify.app/'
-
+    src: QuizPlatform,
+    l: "https://github.com/srishti-23/QuizPlatform",
+    href: "https://almaquiz.netlify.app/",
+    details:"QuizPlatform is a dynamic and engaging web application designed to create, manage, and play quizzes"
   },
+  
   {
     id: 4,
-    src: todo,
-    href:'https://list23.netlify.app/'
-
+    src: travel,
+    l: "https://github.com/srishti-23/travel-website/blob/main/README.md",
+    href: "https://exploretgotrip.netlify.app/",
+    details: "A simple static travel website named as ExploreGo.his website has been created using HTML and CSS",
   },
+  {
+    id: 5,
+    src: myntra,
+    l: "https://github.com/srishti-23/myntra-clone/blob/main/README.md",
+    href: "https://cloneofmyntra.netlify.app",
+    details:
+      "A Myntra clone is a web application that aims to replicate the functionality and user interface of the Myntra e-commerce platform.it is designed using React js ,cart is managed using redux and UI is managed using Tailwind CSS . ",
+  }
 ];
 
 const Projects = () => {
+  const [projectDetails, setProjectDetails] = useState(null);
+
+  const handleProjectClick = (details) => {
+    setProjectDetails(details);
+  };
+
   return (
     <div
       name="projects"
@@ -41,22 +66,39 @@ const Projects = () => {
           <p className="py-6">Here are some of my major projects</p>
         </div>
         <div className="w-full h-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center px-8 py-12 sm:px-0">
-          {project.map(({ id, src,href }) => (
+          {projectData.map(({ id, src, href, details,l }) => (
             <div
               key={id}
               className="shadow-md hover:scale-125 duration-500 py-2 rounded-lg border-black "
             >
-              <img src={src} alt="" className="w-60 mx-auto" />
-              <p className="flex items-center justify-center ">
-                <button className=" mx-auto px-6 py-3 m-4 duration-200 hover:scale-105 text-center">
-                <a
-                href={href}
-                className="flex justify-between items-center w-full text-white"
-              >
-              View
-              </a>
-                </button>
-              </p>
+              {projectDetails === details ? (
+                <div>
+                  <p>{details}<br></br>
+                 <a href={l}> Read more..</a></p>
+                  <button onClick={() => setProjectDetails(null)}>Close</button>
+                </div>
+              ) : (
+                <div>
+                  <img src={src} alt="" className="w-60 mx-auto" />
+                  <p className="flex items-center justify-center ">
+                  <button className=" mx-auto px-6 py-3 m-4 duration-200 hover:scale-105 text-center">
+                      <a
+                        href={href}
+                        className=" justify-between items-center w-full text-white space-x-2"
+                      >
+                        View
+                      </a>
+                    </button>
+                    <button
+                      className="mx-auto px-6 py-3 m-4 duration-200 hover:scale-105 text-center "
+                      onClick={() => handleProjectClick(details)}
+                    >
+                      Details
+                    </button>
+                
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
