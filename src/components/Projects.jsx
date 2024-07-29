@@ -25,7 +25,7 @@ const projectData = [
     id: 3,
     src: QuizPlatform,
     l: "https://github.com/srishti-23/QuizPlatform",
-    href: "https://almaquiz.netlify.app/",
+    href: "https://almaquiz.netlify.app",
     details:"QuizPlatform is a dynamic and engaging web application designed to create, manage, and play quizzes"
   },
   
@@ -33,7 +33,7 @@ const projectData = [
     id: 4,
     src: travel,
     l: "https://github.com/srishti-23/travel-website/blob/main/README.md",
-    href: "https://exploretgotrip.netlify.app/",
+    href: "https://exploretgotrip.netlify.app",
     details: "A simple static travel website named as ExploreGo.his website has been created using HTML and CSS",
   },
   {
