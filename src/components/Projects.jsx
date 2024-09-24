@@ -4,6 +4,7 @@ import QuizPlatform from "../images/quizPlat.png";
 import entertainmentApp from "../images/etApp.png";
 import myntra from "../images/myntra-clone.png";
 import travel from "../images/travel.png";
+import indeedApp from "../images/indeed.png"
 
 const projectData = [
   {
@@ -13,13 +14,12 @@ const projectData = [
     href: "https://main--srishtitasklist.netlify.app",
     details: "This Todo App is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) with Tailwind CSS for styling.",
   },
- 
   {
     id: 2,
-    src: entertainmentApp,
-    l: "https://github.com/srishti-23/Entertainment-app",
-    href: "https://entertainment-app-frontend-styv.onrender.com",
-    details: "This is an entertainment website similar to Netflix that display a list of movies and TV shows and provides the users to signup and login to the website and also bookmark their favourite movies and TV shows. ",
+    src: travel,
+    l: "https://github.com/srishti-23/travel-website/blob/main/README.md",
+    href: "https://exploretgotrip.netlify.app",
+    details: "A simple static travel website named as ExploreGo.his website has been created using HTML and CSS",
   },
   {
     id: 3,
@@ -28,14 +28,15 @@ const projectData = [
     href: "https://almaquiz.netlify.app",
     details:"QuizPlatform is a dynamic and engaging web application designed to create, manage, and play quizzes"
   },
-  
+ 
   {
     id: 4,
-    src: travel,
-    l: "https://github.com/srishti-23/travel-website/blob/main/README.md",
-    href: "https://exploretgotrip.netlify.app",
-    details: "A simple static travel website named as ExploreGo.his website has been created using HTML and CSS",
+    src: entertainmentApp,
+    l: "https://github.com/srishti-23/Entertainment-app",
+    href: "https://entertainment-app-frontend-styv.onrender.com",
+    details: "This is an entertainment website similar to Netflix that display a list of movies and TV shows and provides the users to signup and login to the website and also bookmark their favourite movies and TV shows. ",
   },
+ 
   {
     id: 5,
     src: myntra,
@@ -43,7 +44,15 @@ const projectData = [
     href: "https://cloneofmyntra.netlify.app",
     details:
       "A Myntra clone is a web application that aims to replicate the functionality and user interface of the Myntra e-commerce platform.it is designed using React js ,cart is managed using redux and UI is managed using Tailwind CSS . ",
+  },
+  {
+    id: 6,
+    src: indeedApp,
+    l: "https://github.com/srishti-23/indeed.git",
+    href: "https://backend--indeed-app.netlify.app",
+    details: "This website is  job searching platform aims to clone the functionality of the indeed website ",
   }
+ 
 ];
 
 const Projects = () => {
